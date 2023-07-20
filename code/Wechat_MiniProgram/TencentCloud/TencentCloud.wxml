@@ -1,0 +1,76 @@
+<view style="display:flex; flex-direction:column; align-items:center;">
+  <image style="width:200px; height:60px;" src="../../image/HiSpark.png" mode="cover"></image>
+  <view></view>
+</view>
+
+<view class="body">
+  <view class="cell" style="display:flex; align-items:center; justify-content:space-between;">
+    <view style="font-weight: bold;">总开关</view>
+    <switch name="master" data-item="master" bindchange="switchChange_master"/>
+  </view>
+</view>
+
+<view class="body">
+  <view style="font-weight: bold;">
+    控制模式
+  </view>
+  <text>\n</text>
+  <view class="box">
+    <view class="cell">
+      <view class="status-left">智能跟随/远程遥控</view>
+      <view>
+          <switch name="mode" data-item="mode" checked="{{stateReported.mode}}" bindchange="switchChange_mode"/>
+        </view>
+      
+    </view>
+  </view>
+
+  <text>\n</text>
+
+  <form bindsubmit="">
+    <!-- <view style="display:flex; flex-direction:row; justify-content: space-between;">
+      <view style="font-weight: bold;">
+        获取云端数据
+      </view>
+      <view>
+        <button type="primary" size="mini" bindtap="update">刷新</button>
+      </view>
+    </view> -->
+    <view class="box">
+      <view class="cell">
+        <view>逗猫棒</view>
+        <view>
+          <switch name="CatRod" data-item="CatRod" checked="{{stateReported.CatRod}}" bindchange="switchChange_rod"/>
+        </view>
+      </view>
+      <view class="cell">
+        <view>激光笔</view>
+        <view>
+          <switch name="LaserPen" data-item="LaserPen" checked="{{stateReported.LaserPen}}" bindchange="switchChange_pen"/>
+        </view>
+      </view>
+      <view class="cell">
+        <!-- <view>风扇</view> -->
+        <!-- <view>
+          <switch name="motor" data-item="motor" checked="{{stateReported.motor}}" bindchange="switchChange"/>
+        </view> -->
+      </view>
+      
+    </view>
+  </form>
+</view>
+
+<view class="relative">
+  <!-- 第一个背景图片 -->
+  <image style="width: 100px; height: 100px;" class="pic_background1" src="../../image/yaogan_di.png"></image>
+   <!-- 第二个背景图片 -->
+   <image style="width: 100px; height: 100px;" class="pic_background2" src="../../image/yaogan_di.png"></image>
+  <!-- 第一个摇杆 -->
+  <image style="width: 80px; height: 80px; left: {{leftLooks1}}px; top: {{topLooks1}}px;" bindtouchend="ImageReturn1" bindtouchmove="ImageTouchMove1" class="pic_tou1" src="../../image/yaogan_tou.png" bindtap="ImageTouch1"></image>
+  <view class="joystick-label1">小车控制</view>
+  <!-- 第二个摇杆 -->
+  <image style="width: 80px; height: 80px; left: {{leftLooks2}}px; top: {{topLooks2}}px;" bindtouchend="ImageReturn2" bindtouchmove="ImageTouchMove2" class="pic_tou2" src="../../image/yaogan_tou.png" bindtap="ImageTouch2"></image>
+  <view class="joystick-label2">云台控制</view>
+  <button class='resetButton' bindtap="resetPanTilt">复位云台</button>
+
+</view>

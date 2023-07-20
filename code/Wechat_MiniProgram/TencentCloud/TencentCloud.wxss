@@ -1,0 +1,104 @@
+.body {
+    margin: 10rpx 20rpx;
+  }
+  
+  .box {
+    padding: 0rpx 20rpx;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+  }
+  
+  .cell {
+    margin-top: 10rpx;
+    margin-bottom: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .left {
+    width: 50%;
+    text-align: left;
+  }
+  
+  .right {
+    width: 40%;
+    text-align: right;
+  }
+  
+  .unit {
+    width: 10%;
+    text-align: right;
+  }
+
+.relative {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  
+  .pic_background1 {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 370px;
+    left: 40px;
+  }
+  
+  .pic_background2 {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 370px;
+    left: 180px;
+  }
+  
+  .pic_tou1 {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 380px;
+    left: 50px;
+  }
+  
+  .pic_tou2 {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 380px;
+    left: 190px;
+  }
+  .log-item {
+    margin: 10rpx;
+  }
+
+  .joystick-label1 {
+    position: fixed;
+    font-size: 18px;
+    color: #000;
+    text-align: center;
+    left: 50px;
+    margin-top: 10px;
+}
+
+.joystick-label2 {
+    position: fixed;
+    font-size: 18px;
+    color: #000;
+    text-align: center;
+    left: 190px;
+    margin-top: 10px;
+}
+
+.resetButton {
+    width: 80px;   /* 宽度 */
+    height: 25px;   /* 高度 */
+    position: absolute;   /* 绝对定位 */
+    top: 33px;   /* 距离顶部的距离 */
+    left: 240px;   /* 距离左侧的距离 */
+    font-size: 12px;   /* 字体大小 */
+    display: flex;   /* 设置为弹性布局 */
+    justify-content: center;   /* 水平居中 */
+    align-items: center;   /* 垂直居中 */
+}
+  
